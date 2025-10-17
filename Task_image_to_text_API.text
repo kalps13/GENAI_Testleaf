@@ -1,0 +1,63 @@
+Task: Image to text API
+
+PAYLOAD
+
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+            "type":"text",
+            "text":"This is an image, extract and return only text exactly as show,put it in small case, reverse the string"
+        },
+        {
+            "type":"image_url",
+            "image_url":{
+                "url":
+            "https://www.shutterstock.com/shutterstock/photos/2065712915/display_1500/stock-vector-vector-illustration-of-sample-red-grunge-stamp-isolated-in-transparent-background-png-2065712915.jpg"}
+        }
+      ]
+    }
+  ],
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "max_tokens": 500
+  //"stream": true
+  }
+
+
+
+Response JSON:
+
+{
+    "id": "chatcmpl-1d8bdeb5-7ca5-4527-93ae-fcb3fc9a188a",
+    "object": "chat.completion",
+    "created": 1760680890,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Here is the text extracted from the image:\n\n* sample\n\nThe text in small case is:\n\n* sample\n\nThe reversed string of the text is:\n\n* elpmas"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "queue_time": 0.148394061,
+        "prompt_tokens": 2502,
+        "prompt_time": 0.078604738,
+        "completion_tokens": 35,
+        "completion_time": 0.079505064,
+        "total_tokens": 2537,
+        "total_time": 0.158109802
+    },
+    "usage_breakdown": null,
+    "system_fingerprint": "fp_37da608fc1",
+    "x_groq": {
+        "id": "req_01k7rc4kgqecztk4amdm7p1dff"
+    },
+    "service_tier": "on_demand"
+}
