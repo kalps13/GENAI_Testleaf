@@ -1,0 +1,60 @@
+#Input Payload:
+
+
+{
+  "model": "llama-3.3-70b-versatile",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Context: User Story:\nAs a QA tester, I want to create an testcases for  banking payment flow application which APIs services getting the payment files copies via solace queue to validate the critical data elements are intact across all the payment files through the process flow. Payment files are in swift , pain files and there 3 hops \n\nInstructions:\n    - Generate non-functional testcases for this user story.\n    - Generate 5 testcases, to cover the majority of non-functional testcases."
+    },
+    {
+      "role": "system",
+      "content": "- You are an expert in Banking  SWIFT  Payment file flow Testing\n    - You are aware of APIs and its testing methodologies."
+    },
+    {
+      "role": "assistant",
+      "content": "- Output the testcases in a table format with the following text fields- test cases id, pre conditions if any, test cases scenario, steps to Reproduce, Expected Results"
+    }
+  ],
+  "temperature": 0.1
+}
+
+
+-----------------------------------------------------------------------------------
+
+
+#api response:
+
+{
+    "id": "chatcmpl-f9eeb388-b69d-4ef0-84a7-f9b19eb802cb",
+    "object": "chat.completion",
+    "created": 1760684898,
+    "model": "llama-3.3-70b-versatile",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": ".\n\nHere are five non-functional test cases for the banking payment flow application:\n\n| Test Case ID | Pre-Conditions | Test Case Scenario | Steps to Reproduce | Expected Results |\n| --- | --- | --- | --- | --- |\n| NF-001 | Payment files are available in Solace queue, API services are up and running | **Performance Testing**: Validate the application's ability to process a large volume of payment files within a specified time frame | 1. Generate a large volume of payment files (SWIFT, PAIN) and add them to the Solace queue. 2. Measure the time taken by the application to process the files. 3. Verify that the application can process the files within the specified time frame (e.g., 1 hour). | The application should be able to process the payment files within the specified time frame without any significant delays or performance issues. |\n| NF-002 | Payment files are available in Solace queue, API services are up and running | **Security Testing**: Validate the application's ability to handle sensitive data and prevent unauthorized access | 1. Create a test payment file with sensitive data (e.g., account numbers, payment amounts). 2. Add the file to the Solace queue and verify that the application processes it correctly. 3. Attempt to access the file using an unauthorized API call or user credentials. | The application should prevent unauthorized access to the payment file and its sensitive data, and only allow authorized API calls or user credentials to access the file. |\n| NF-003 | Payment files are available in Solace queue, API services are up and running | **Data Integrity Testing**: Validate the application's ability to maintain data integrity across all three hops | 1. Create a test payment file with critical data elements (e.g., payment amount, beneficiary details). 2. Add the file to the Solace queue and verify that the application processes it correctly across all three hops. 3. Verify that the critical data elements are intact and not modified or corrupted during the processing. | The application should maintain data integrity across all three hops, and the critical data elements should remain intact and not modified or corrupted. |\n| NF-004 | Payment files are available in Solace queue, API services are up and running | **Error Handling Testing**: Validate the application's ability to handle errors and exceptions during payment file processing | 1. Create a test payment file with invalid or corrupted data (e.g., incorrect payment amount, missing beneficiary details). 2. Add the file to the Solace queue and verify that the application detects the error and handles it correctly. 3. Verify that the application logs the error and sends notifications to the relevant teams or stakeholders. | The application should detect the error and handle it correctly, logging the error and sending notifications to the relevant teams or stakeholders. |\n| NF-005 | Payment files are available in Solace queue, API services are up and running | **Scalability Testing**: Validate the application's ability to scale up or down to handle changes in payment file volume | 1. Generate a varying volume of payment files (e.g., low, medium, high) and add them to the Solace queue. 2. Measure the application's performance and resource utilization (e.g., CPU, memory) at each volume level. 3. Verify that the application can scale up or down to handle the changes in payment file volume without significant performance issues. | The application should be able to scale up or down to handle changes in payment file volume, and its performance and resource utilization should be proportional to the volume level. |"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "queue_time": 0.048444972,
+        "prompt_tokens": 197,
+        "prompt_time": 0.017917468,
+        "completion_tokens": 736,
+        "completion_time": 1.7466709599999999,
+        "total_tokens": 933,
+        "total_time": 1.7645884280000002
+    },
+    "usage_breakdown": null,
+    "system_fingerprint": "fp_9e1e8f8435",
+    "x_groq": {
+        "id": "req_01k7rfywpyf1vrjfj3reag3j2k"
+    },
+    "service_tier": "on_demand"
+}

@@ -1,0 +1,13 @@
+Task: Voice to text conversion
+
+API input- 
+model - whisper-large-v3
+file- voice_note.ogg
+
+API Response:
+{
+    "text": " Easy Test Authoring. Achieve faster test authoring by recording user actions to generate automated tests. User-friendly recorder with no learning curve. Visual validation. Replicate the testing capabilities of human eyes to detect functional regressions without having to write complex assertions.",
+    "x_groq": {
+        "id": "req_01k7rcdhpvek7rnmvanfhzrj5m"
+    }
+}
