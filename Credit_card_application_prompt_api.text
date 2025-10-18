@@ -1,0 +1,225 @@
+Instructions - 
+        - Generate different test data combinations for credit card application for different types of  credit cards (visa/master card) and conditions
+        - Consider customers from different country zones and different salary ranges-  who holds basic cards to premium /priority cards
+	- Consider offers, lounge access, discounts, cash back for each card type
+        - [Mandatory] Generate only unique Test data
+        - Generate 5 to 6 sets of data only
+        - Generate data more closer to reality
+    Context - 
+        - I am a senior QA engineer expert in testing the applications in Banking domain
+    Example - 
+        First Name - Lakshmanan
+        Last Name - Chellappan
+        Card Type - Visa Rewards card
+        Credit Score - Good
+	Lounge access- domestic access year 2 free
+        These are few example of test data, [Donot]  restrict yourself to only these fields, consider only as an example and generate the test data as per different cards and conditions available in the banking industry
+    Persona - 
+        - I am an QA engineer to generate multiple sets of test data
+    Output format - 
+        - Output only the Test data in a  json format and also in table format with s.no, test cases id, test scenario description, expected results
+
+chatGPT Response
+
+🧩 Test Data (JSON Format)
+[
+  {
+    "TestCaseID": "CC001",
+    "FirstName": "Arjun",
+    "LastName": "Reddy",
+    "Country": "India",
+    "Region": "APAC",
+    "CardType": "Visa Platinum Rewards Card",
+    "CustomerType": "Existing Customer",
+    "CreditScore": "Excellent",
+    "AnnualIncome": 1200000,
+    "CardTier": "Premium",
+    "LoungeAccess": "Unlimited Domestic & 4 International per year",
+    "CashbackOffer": "5% on fuel & groceries",
+    "Discounts": "20% on partnered restaurants",
+    "JoiningFee": 5000,
+    "AnnualFee": 2500,
+    "EligibilityCondition": "Minimum annual income ₹10 Lakh",
+    "ExpectedResult": "Application Approved with Premium Benefits"
+  },
+  {
+    "TestCaseID": "CC002",
+    "FirstName": "Maria",
+    "LastName": "Lopez",
+    "Country": "Spain",
+    "Region": "EU",
+    "CardType": "MasterCard Gold Travel Card",
+    "CustomerType": "New Customer",
+    "CreditScore": "Good",
+    "AnnualIncome": 65000,
+    "CardTier": "Priority",
+    "LoungeAccess": "6 International visits/year",
+    "CashbackOffer": "2% on travel bookings",
+    "Discounts": "10% hotel & airline partner discounts",
+    "JoiningFee": 150,
+    "AnnualFee": 100,
+    "EligibilityCondition": "Minimum annual income €50,000",
+    "ExpectedResult": "Application Approved - Travel Rewards Activated"
+  },
+  {
+    "TestCaseID": "CC003",
+    "FirstName": "David",
+    "LastName": "Miller",
+    "Country": "USA",
+    "Region": "North America",
+    "CardType": "Visa Classic Credit Card",
+    "CustomerType": "New Customer",
+    "CreditScore": "Average",
+    "AnnualIncome": 42000,
+    "CardTier": "Basic",
+    "LoungeAccess": "None",
+    "CashbackOffer": "1% on all purchases",
+    "Discounts": "Seasonal e-commerce offers",
+    "JoiningFee": 0,
+    "AnnualFee": 50,
+    "EligibilityCondition": "Minimum credit score 650",
+    "ExpectedResult": "Application Approved - Basic Credit Limit Assigned"
+  },
+  {
+    "TestCaseID": "CC004",
+    "FirstName": "Yuki",
+    "LastName": "Tanaka",
+    "Country": "Japan",
+    "Region": "APAC",
+    "CardType": "MasterCard Titanium Business Card",
+    "CustomerType": "Business Owner",
+    "CreditScore": "Excellent",
+    "AnnualIncome": 22000000,
+    "CardTier": "Premium",
+    "LoungeAccess": "Unlimited Global Access + Priority Pass",
+    "CashbackOffer": "3% on business spends",
+    "Discounts": "25% on hotel bookings & dining",
+    "JoiningFee": 800,
+    "AnnualFee": 400,
+    "EligibilityCondition": "Registered business with annual revenue >¥20M",
+    "ExpectedResult": "Application Approved - Corporate Benefits Enabled"
+  },
+  {
+    "TestCaseID": "CC005",
+    "FirstName": "Sarah",
+    "LastName": "Johnson",
+    "Country": "UK",
+    "Region": "EU",
+    "CardType": "Visa Signature Cashback Card",
+    "CustomerType": "Existing Customer",
+    "CreditScore": "Good",
+    "AnnualIncome": 88000,
+    "CardTier": "Priority",
+    "LoungeAccess": "2 International Lounge Passes/year",
+    "CashbackOffer": "1.5% on all retail spends",
+    "Discounts": "15% on cinema & dining",
+    "JoiningFee": 100,
+    "AnnualFee": 75,
+    "EligibilityCondition": "Credit score >700, income >£70,000",
+    "ExpectedResult": "Application Approved - Cashback Activated"
+  },
+  {
+    "TestCaseID": "CC006",
+    "FirstName": "Ahmed",
+    "LastName": "Khalid",
+    "Country": "UAE",
+    "Region": "Middle East",
+    "CardType": "MasterCard World Elite Card",
+    "CustomerType": "High Net Worth Individual",
+    "CreditScore": "Excellent",
+    "AnnualIncome": 550000,
+    "CardTier": "Elite",
+    "LoungeAccess": "Unlimited Global + Family Access",
+    "CashbackOffer": "5% on international spends",
+    "Discounts": "30% on luxury brands & hotel chains",
+    "JoiningFee": 2000,
+    "AnnualFee": 1000,
+    "EligibilityCondition": "Minimum income AED 400,000",
+    "ExpectedResult": "Application Approved - Elite Privileges Granted"
+  }
+]
+
+📋 Test Data Summary (Table Format)
+S.No	Test Case ID	Test Scenario Description	Expected Result
+1	CC001	Apply for Visa Platinum Rewards Card by an Indian customer with excellent credit score and high income	Application Approved with Premium Benefits
+2	CC002	Apply for MasterCard Gold Travel Card by a European customer with good credit and high travel usage	Application Approved - Travel Rewards Activated
+3	CC003	Apply for Visa Classic Credit Card by an average-income US customer with fair credit	Application Approved - Basic Credit Limit Assigned
+4	CC004	Apply for MasterCard Titanium Business Card by a Japanese business owner with excellent credit	Application Approved - Corporate Benefits Enabled
+5	CC005	Apply for Visa Signature Cashback Card by a UK salaried customer with good credit	Application Approved - Cashback Activated
+6	CC006	Apply for MasterCard World Elite Card by a UAE HNI with excellent credit and high income	Application Approved - Elite Privileges Granted
+
+
+API Requset
+
+
+{
+  "model": "llama-3.3-70b-versatile",
+  "messages": [
+    {
+      "role": "user",
+      "content": "nstructions - - Generate different test data combinations for credit card application for different types of credit cards (visa/master card) and conditions - Consider customers from different country zones and different salary ranges- who holds basic cards to premium /priority cards - Consider offers, lounge access, discounts, cash back for each card type - [Mandatory] Generate only unique Test data - Generate 5 to 6 sets of data only - Generate data more closer to reality Context - - I am a senior QA engineer expert in testing the applications in Banking domain Example - First Name - Lakshmanan Last Name - Chellappan Card Type - Visa Rewards card Credit Score - Good Lounge access- domestic access year 2 free These are few example of test data, [Donot] restrict yourself to only these fields, consider only as an example and generate the test data as per different cards and conditions available in the banking industry "
+    },
+    {
+      "role": "system",
+      "content": "- You are an expert in Banking  credit card application\n    - You are aware of APIs and its testing methodologies."
+    },
+    {
+      "role": "assistant",
+      "content": "- Output the testcases in a table format with the following text fields- test cases id, pre conditions if any, test cases scenario, steps to Reproduce, Expected Results "
+    }
+  ],
+  "temperature": 0.1
+}
+
+
+
+response
+
+{
+    "id": "chatcmpl-bc38886d-35fc-4af8-963a-db844be86513",
+    "object": "chat.completion",
+    "created": 1760778848,
+    "model": "llama-3.3-70b-versatile",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": " - Output the testcases in the following format - \n| Test Case ID | Pre Conditions | Test Case Scenario | Steps to Reproduce | Expected Results |\n| --- | --- | --- | --- | --- | \n| 1 |  |  |  |  |\n| 2 |  |  |  |  |\n| 3 |  |  |  |  |\n| 4 |  |  |  |  |\n| 5 |  |  |  |  |\n| 6 |  |  |  |  | \n\nHere are six unique test data combinations for credit card applications:\n\n| Test Case ID | Pre Conditions | Test Case Scenario | Steps to Reproduce | Expected Results |\n| --- | --- | --- | --- | --- |\n| 1 | Customer has a good credit score (750+) and a salary range of $50,000-$75,000 per annum | Apply for a Visa Signature card with domestic lounge access, 2% cash back on groceries, and a $200 sign-up bonus | 1. Fill out the application form with valid details, 2. Select Visa Signature card, 3. Verify the benefits and offers | The application should be approved, and the customer should receive the Visa Signature card with the specified benefits |\n| 2 | Customer has a fair credit score (600-749) and a salary range of $30,000-$50,000 per annum, residing in a European country | Apply for a Mastercard Gold card with international lounge access, 1% cash back on all purchases, and a $100 sign-up bonus | 1. Fill out the application form with valid details, 2. Select Mastercard Gold card, 3. Verify the benefits and offers | The application should be approved, and the customer should receive the Mastercard Gold card with the specified benefits |\n| 3 | Customer has an excellent credit score (800+) and a salary range of $100,000-$150,000 per annum, holding a premium card | Apply for a Visa Infinite card with unlimited domestic and international lounge access, 3% cash back on travel, and a $500 sign-up bonus | 1. Fill out the application form with valid details, 2. Select Visa Infinite card, 3. Verify the benefits and offers | The application should be approved, and the customer should receive the Visa Infinite card with the specified benefits |\n| 4 | Customer has a poor credit score (below 600) and a salary range of $20,000-$30,000 per annum, residing in an Asian country | Apply for a Mastercard Basic card with no lounge access, 0.5% cash back on all purchases, and no sign-up bonus | 1. Fill out the application form with valid details, 2. Select Mastercard Basic card, 3. Verify the benefits and offers | The application should be approved, and the customer should receive the Mastercard Basic card with the specified benefits |\n| 5 | Customer has a good credit score (750+) and a salary range of $50,000-$75,000 per annum, holding a priority card | Apply for a Visa Platinum card with domestic and international lounge access, 2% cash back on dining, and a $300 sign-up bonus | 1. Fill out the application form with valid details, 2. Select Visa Platinum card, 3. Verify the benefits and offers | The application should be approved, and the customer should receive the Visa Platinum card with the specified benefits |\n| 6 | Customer has an excellent credit score (800+) and a salary range of $150,000-$200,000 per annum, residing in a North American country | Apply for a Mastercard Black card with unlimited domestic and international lounge access, 5% cash back on travel, and a $1,000 sign-up bonus | 1. Fill out the application form with valid details, 2. Select Mastercard Black card, 3. Verify the benefits and offers | The application should be approved, and the customer should receive the Mastercard Black card with the specified benefits |\n\nNote: The test data combinations are generated to cover different scenarios, including various credit scores, salary ranges, card types, and benefits. The expected results are based on the assumption that the application will be approved and the customer will receive the specified benefits."
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "queue_time": 0.04546323,
+        "prompt_tokens": 278,
+        "prompt_time": 0.02463113,
+        "completion_tokens": 894,
+        "completion_time": 1.774049862,
+        "total_tokens": 1172,
+        "total_time": 1.798680992
+    },
+    "usage_breakdown": null,
+    "system_fingerprint": "fp_34d416ee39",
+    "x_groq": {
+        "id": "req_01k7v9j0ntfgxaqavwsvjnf3wp"
+    },
+    "service_tier": "on_demand"
+}
+
+
+
+Deepseek AI OUTPUT
+
+[    {        "FirstName": "Maria",        "LastName": "Fernandez",        "Country": "Spain",        "CardType": "Visa Premium Rewards Card",        "CreditScore": "Excellent",        "SalaryRange": "75,000 - 100,000 EUR",        "LoungeAccess": "Unlimited domestic and international access",        "Offers": "10% cash back on travel bookings",        "Discounts": "15% off at select restaurants",        "CashBack": "5% on grocery purchases"    },    {        "FirstName": "Ajay",        "LastName": "Patel",        "Country": "India",        "CardType": "MasterCard Basic Card",        "CreditScore": "Fair",        "SalaryRange": "30,000 - 45,000 INR",        "LoungeAccess": "No lounge access",        "Offers": "5% cash back on utility bills",        "Discounts": "10% off on movie tickets",        "CashBack": "2% on fuel purchases"    },    {        "FirstName": "Laura",        "LastName": "Dupont",        "Country": "France",        "CardType": "Visa Classic Card",        "CreditScore": "Good",        "SalaryRange": "50,000 - 70,000 EUR",        "LoungeAccess": "1 year complimentary domestic access",        "Offers": "5% off on hotel bookings",        "Discounts": "10% discount on fashion goods",        "CashBack": "3% on online shopping"    },    {        "FirstName": "Tom",        "LastName": "Johnson",        "Country": "USA",        "CardType": "MasterCard Gold Card",        "CreditScore": "Very Good",        "SalaryRange": "80,000 - 120,000 USD",        "LoungeAccess": "Unlimited domestic access",        "Offers": "5% cash back on all purchases during first year",        "Discounts": "20% off at select electronics stores",        "CashBack": "4% on dining"    },    {        "FirstName": "Yuki",        "LastName": "Sato",        "Country": "Japan",        "CardType": "Visa Signature Card",        "CreditScore": "Excellent",        "SalaryRange": "100,000 - 150,000 JPY",        "LoungeAccess": "3 free international accesses per year",        "Offers": "15% cash back on all travel expenses",        "Discounts": "5% off at select retail partners",        "CashBack": "2% on all other spends"    },    {        "FirstName": "Khalid",        "LastName": "Al-Farsi",        "Country": "UAE",        "CardType": "MasterCard Platinum Card",        "CreditScore": "Good",        "SalaryRange": "120,000 - 180,000 AED",        "LoungeAccess": "Unlimited domestic and 2 international lounges per year",        "Offers": "10% cash back on online shopping",        "Discounts": "15% off at select luxury hotels",        "CashBack": "5% on grocery shopping"    }]
+
+
+S.No	Test Case ID	Test Scenario Description	Expected Results
+1	TC001	Verify Visa Premium Rewards Card application for a customer from Spain	All benefits including unlimited lounge access and 10% cash back on travel bookings available
+2	TC002	Verify MasterCard Basic Card application for a customer from India	Confirm no lounge access and applicable 5% cash back on utility bills
+3	TC003	Verify Visa Classic Card application for a customer from France	Check for one year complimentary lounge access and discounts on fashion goods are available
+4	TC004	Verify MasterCard Gold Card application for a customer from USA	Confirm all first-year cash back benefits and unlimited domestic lounge access
+5	TC005	Verify Visa Signature Card application for a customer from Japan	All travel-related offers and lounge benefits available as described
+6	TC006	Verify MasterCard Platinum Card application for a customer from UAE	Ensure lounge access and cash back offers function correctly
+
